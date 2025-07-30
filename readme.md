@@ -64,6 +64,7 @@ Create a `.env` file in the root of the project and add your Google API key like
 
 ## How to Run ධ
 Once you have completed the setup, you can run the application with the following command:
+GOOGLE_API_KEY="YOUR_API_KEY"
 
 ```bash
 streamlit run app.py
