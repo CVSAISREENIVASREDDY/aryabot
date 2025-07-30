@@ -30,17 +30,41 @@ Follow these steps to get ARYA running on your local machine.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/CVSAISREENIVASREDDY/aryabot.git 
+git clone https://github.com/CVSAISREENIVASREDDY/aryabot.git
+cd aryabot 
+```
+### 2. Create and Activate a Virtual Environment
 
-# For Windows
-python -m venv venv
-.\\venv\\Scripts\\activate
+* **For Windows**:
 
-# For macOS/Linux
-python3 -m venv venv
-source venv/bin/activate
+    ```bash
+    python -m venv venv
+    .\\venv\\Scripts\\activate
+    ```
 
+* **For macOS/Linux**:
+
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+
+### 3. Install Dependencies
+
+Install all the required packages using the `requirements.txt` file.
+
+```bash
 pip install -r requirements.txt
+```
 
+### 4. Set Up Your Environment Variables
+
+Create a `.env` file in the root of the project and add your Google API key like this:
+
+
+## How to Run ධ
+Once you have completed the setup, you can run the application with the following command:
+
+```bash
 streamlit run app.py
-
+```
