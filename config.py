@@ -22,7 +22,7 @@ class Questioner:
         Give only questions, no answers, no annotations, no documentation, just {n} concise questions.
         Format your output as a valid JSON array of strings like ["Q1", "Q2", "Q3"].
         Only return the JSON array. No explanation.
-        IMPORTANT: Make sure all of the {n} questions are completely related to {topic}.
+        IMPORTANT: Make sure all of the {n} questions are completely related to {topic}. 
         """
         self.model = genai.GenerativeModel(LLM_MODEL, system_instruction=system_ins)
 
@@ -100,6 +100,8 @@ class Evaluator:
         paper_details = json.dumps(self.paper, indent=2)
         prompt = f"""You are a helpful AI assistant. A user has just completed a quiz on the topic of '{self.topic}'.
         Here is their performance data:
+        If user asks questions out of context, politely inform them that you can only discuss their quiz performance. 
+        
         {paper_details}
         
         The user asks: "{user_prompt}"
