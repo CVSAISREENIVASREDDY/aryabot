@@ -5,6 +5,7 @@ from config import Questioner, Evaluator
 
 st.set_page_config(page_title="I'm Arya, your Interviewer", layout="centered")
 
+print('hhh')
 # --- UI X-Factors & Personalization ---
 st.markdown("""
 <style>
